@@ -5,10 +5,10 @@ account: vallarishah
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4521840
-bundleId: 4951411
+bundleId: 4969105
 url: https://vallarishah.shinyapps.io/R_Shiny_project/
-when: 1629671138.49879
-lastSyncTime: 1629671138.49879
+when: 1630013980.92745
+lastSyncTime: 1630013980.92745
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: Outputs/COVIDAdmissionsHeatmap.tiff|Outputs/COVIDCFRs.tiff|Outputs/graphs.R|Outputs/helpers.R|Outputs/preProc.R
+ignoredFiles: Outputs/graphs.R|Outputs/helpers.R|Outputs/preProc.R

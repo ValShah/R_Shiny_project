@@ -130,16 +130,17 @@ shinyServer(function(input, output){
             arrange(date) %>% 
             mutate(date_case = date(date)) %>% 
             mutate(Diff = hosp.cases - lag(hosp.cases)) %>% 
-            mutate(No_mechanically_ventilated = hosp.cases - Mechanically_ventilated) 
+            mutate(Non_mechanically_ventilated = hosp.cases - Mechanically_ventilated) 
         
-        gvisSteppedAreaChart(hosp.reg2, xvar="date_case", yvar=c("Mechanically_ventilated", "No_mechanically_ventilated"),
+        gvisSteppedAreaChart(hosp.reg2, xvar="date_case", yvar=c("Mechanically_ventilated", "Non_mechanically_ventilated"),
                              options=list(isStacked=TRUE, 
                                           title="Hospital Admissions: Mechanically ventilated vs non-mechanical ventilated", 
                                           titlePosition='out',
                                           vAxis= "{title: 'Number of patients'}",
                                           hAxis="{title:'Date', slantedText:'true',slantedTextAngle:45}",
                                           legend="{position: 'bottom', textStyle: {color: 'blue', fontSize: 16}}",
-                                          titleTextStyle="{color:'black',fontName:'Courier',fontSize:14}"
+                                          titleTextStyle="{color:'black',fontName:'Courier',fontSize:14}", 
+                                          height=600, width=1000
                                           ))
     })
     
